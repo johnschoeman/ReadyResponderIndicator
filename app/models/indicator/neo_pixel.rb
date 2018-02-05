@@ -522,9 +522,143 @@ module Indicator
     validates :pixels, inclusion: { in: 0..256,
     message: "%{value} is not within the range 0..256" }
   
-    
     def sync
       Apiotics.sync(self)
+    end
+
+    def set_pixel(pixel, value)
+      raise 'pixel is undefined' unless pixel
+      self.send("pixel_#{pixel}=", value)
+    end
+
+    def set_pixel!(pixel, value)
+      self.set_pixel(pixel, value)
+      self.save
+    end
+
+    def increment_pixel(pixel, value)
+      old_value = self.send("pixel_#{pixel}")
+      self.send("pixel_#{pixel}=", old_value + value)
+    end
+
+    def increment_pixel!(pixel, value)
+      self.increment_pixel(pixel, value)
+      self.save
+    end
+
+    def reset!
+      self.pixels = 32
+      3.times do
+        self.each_pixel { 5 }
+        self.save
+        sleep 0.25
+        self.each_pixel { 0 }
+        self.save
+      end
+    end
+
+    def clear!
+      self.each_pixel { 0 }
+      self.save
+    end
+
+    def each_pixel(&blk)
+      if block_given?
+        (0...self.pixels).each do |i|
+          self.set_pixel(i, blk.call(i))
+        end
+        return self
+      else
+      end
+    end
+
+    def each_led(&blk)
+      if block_given?
+        (0...24).each do |i|
+          self.set_led(i, blk.call(i))
+        end
+        return self
+      end
+    end
+
+    def set_led_range(start = 0, stop = 24, &blk)
+      if block_given?
+        (start...stop).each do |i|
+          self.set_led(i, blk.call(i))
+        end
+        return self
+      end
+    end
+
+    def rgb(r,g,b)
+      {r: r, g: g, b: b}
+    end
+
+    LED_TO_PIXEL_RED = {0=>0, 1=>1, 2=>3, 3=>4, 4=>5, 5=>7, 6=>8, 7=>9, 8=>11, 9=>12, 10=>13, 11=>15, 12=>16, 13=>17, 14=>19, 15=>20, 16=>21, 17=>23, 18=>24, 19=>25, 20=>27, 21=>28, 22=>29, 23=>31} 
+    LED_TO_PIXEL_GREEN = {0=>0, 1=>1, 2=>2, 3=>4, 4=>5, 5=>6, 6=>8, 7=>9, 8=>10, 9=>12, 10=>13, 11=>14, 12=>16, 13=>17, 14=>18, 15=>20, 16=>21, 17=>22, 18=>24, 19=>25, 20=>26, 21=>28, 22=>29, 23=>30}
+    LED_TO_PIXEL_BLUE = {0=>0, 1=>2, 2=>3, 3=>4, 4=>6, 5=>7, 6=>8, 7=>10, 8=>11, 9=>12, 10=>14, 11=>15, 12=>16, 13=>18, 14=>19, 15=>20, 16=>22, 17=>23, 18=>24, 19=>26, 20=>27, 21=>28, 22=>30, 23=>31}
+
+    # options example: { r: 1, g: 1, b: 0 }
+    def set_led(led, options = {})
+      r = options[:r] || 0
+      g = options[:g] || 0
+      b = options[:b] || 0
+      red = [65536, 1, 0, 256]
+      green = [256, 65536, 1, 0]
+      blue = [1, 0, 256, 65536]
+      self.set_pixel(LED_TO_PIXEL_RED[led], 0) unless g != 0 && !(r != 0)
+      self.set_pixel(LED_TO_PIXEL_GREEN[led], 0) unless b != 0 && !(g != 0)
+      self.set_pixel(LED_TO_PIXEL_BLUE[led], 0) unless r != 0 && !(b != 0)
+      self.increment_pixel(LED_TO_PIXEL_RED[led], r * red[LED_TO_PIXEL_RED[led] % 4]) unless r == 0
+      self.increment_pixel(LED_TO_PIXEL_GREEN[led], g * green[LED_TO_PIXEL_GREEN[led] % 4]) unless g == 0
+      self.increment_pixel(LED_TO_PIXEL_BLUE[led], b * blue[LED_TO_PIXEL_BLUE[led] % 4]) unless b == 0
+    end
+
+    def set_led!(led, options = {})
+      self.set_led(led, options)
+      self.save
+    end
+
+    def self.generate_led_to_pixel_map
+      hash = {}
+      pixel = 0
+      count = 2 # set to 0 for red, 1 for green, 2 for blue
+      (0...24).each do |i|
+        pixel += 1 if count % 3 == 0
+        hash[i] = pixel
+        pixel += 1
+        count += 1
+      end
+      hash
+    end
+
+    def turn_on!(timeout = 1, options = {})
+      (0...24).each do |i|
+        sleep timeout
+        self.set_led!(i, options)
+      end
+    end
+
+    def party!(timeout = 0.25)
+      states = [rgb(10,0,0), rgb(0,10,0), rgb(0,0,10)]
+      12.times do
+        sleep timeout
+        self.each_led do |led|
+          states.sample
+        end
+        self.save
+      end
+    end
+
+    def pinwheel!(times = 12)
+      count = 0
+      times.times do
+        sleep 0.25
+        self.each_pixel { |led| led % 4 == count % 4 ? 5 : 0}
+        self.save
+        count += 1
+      end
+      self.reset!
     end
 
     private
