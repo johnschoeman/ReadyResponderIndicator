@@ -7,520 +7,47 @@ module Indicator
     after_commit :extract, unless: :skip_extract
     after_commit :channel_push
     
-    validates :pixel_0, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_1, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_2, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_3, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_4, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_5, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_6, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_7, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_8, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_9, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_10, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_11, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_12, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_13, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_14, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_15, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_16, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_17, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_18, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_19, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_20, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_21, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_22, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_23, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_24, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_25, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_26, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_27, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_28, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_29, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_30, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_31, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_32, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_33, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_34, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_35, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_36, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_37, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_38, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_39, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_40, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_41, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_42, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_43, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_44, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_45, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_46, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_47, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_48, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_49, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_50, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_51, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_52, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_53, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_54, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_55, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_56, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_57, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_58, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_59, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_60, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_61, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_62, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_63, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_64, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_65, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_66, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_67, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_68, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_69, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_70, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_71, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_72, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_73, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_74, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_75, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_76, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_77, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_78, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_79, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_80, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_81, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_82, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_83, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_84, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_85, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_86, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_87, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_88, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_89, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_90, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_91, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_92, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_93, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_94, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_95, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_96, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_97, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_98, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_99, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_100, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_101, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_102, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_103, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_104, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_105, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_106, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_107, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_108, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_109, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_110, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_111, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_112, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_113, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_114, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_115, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_116, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_117, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_118, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_119, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_120, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_121, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_122, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_123, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_124, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_125, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_126, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_127, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_128, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_129, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_130, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_131, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_132, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_133, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_134, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_135, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_136, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_137, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_138, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_139, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_140, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_141, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_142, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_143, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_144, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_145, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_146, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_147, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_148, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_149, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_150, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_151, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_152, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_153, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_154, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_155, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_156, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_157, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_158, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_159, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_160, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_161, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_162, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_163, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_164, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_165, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_166, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_167, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_168, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_169, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_170, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_171, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_172, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_173, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_174, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_175, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_176, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_177, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_178, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_179, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_180, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_181, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_182, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_183, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_184, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_185, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_186, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_187, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_188, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_189, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_190, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_191, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_192, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_193, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_194, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_195, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_196, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_197, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_198, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_199, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_200, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_201, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_202, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_203, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_204, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_205, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_206, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_207, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_208, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_209, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_210, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_211, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_212, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_213, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_214, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_215, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_216, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_217, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_218, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_219, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_220, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_221, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_222, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_223, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_224, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_225, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_226, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_227, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_228, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_229, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_230, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_231, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_232, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_233, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_234, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_235, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_236, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_237, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_238, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_239, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_240, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_241, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_242, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_243, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_244, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_245, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_246, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_247, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_248, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_249, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_250, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_251, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_252, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_253, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_254, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixel_255, inclusion: { in: 0..16777215,
-    message: "%{value} is not within the range 0..16777215" }
-    validates :pixels, inclusion: { in: 0..256,
-    message: "%{value} is not within the range 0..256" }
+    validates :pixel_0, :pixel_1, :pixel_2, :pixel_3, :pixel_4, :pixel_5, :pixel_6, :pixel_7, :pixel_8, :pixel_9, :pixel_10, :pixel_11, :pixel_12, :pixel_13, :pixel_14, :pixel_15, :pixel_16, :pixel_17, :pixel_18, :pixel_19, :pixel_20, :pixel_21, :pixel_22, :pixel_23, :pixel_24, :pixel_25, :pixel_26, :pixel_27, :pixel_28, :pixel_29, :pixel_30, :pixel_31, :pixel_32, inclusion: { in: 0..16777215 }
+    validates :pixels, inclusion: { in: 0..256, message: "%{value} is not within the range 0..256" }
+
+    NUM_PIXELS = 32
+    MAX_PIXELS = 255
+    NUM_LEDS = 24
+
+    def self.generate_led_to_pixel_map(color)
+      led_to_pixel_map = {}
+      initial_count = {
+        'red' => 1,
+        'green' => 0,
+        'blue' => 2,
+      }
+      pixel = color == 'green' ? -1 : 0
+      count = initial_count[color]
+      (0...NUM_LEDS).each do |led_idx|
+        pixel += 1 if count % 3 == 0
+        led_to_pixel_map[led_idx] = pixel
+        pixel += 1
+        count += 1
+      end
+      led_to_pixel_map
+    end
+
+    LED_TO_PIXEL_RED   = self.generate_led_to_pixel_map('red')   # == {0=>0, 1=>1, 2=>3, 3=>4, 4=>5, 5=>7, 6=>8, 7=>9, 8=>11, 9=>12, 10=>13, 11=>15, 12=>16, 13=>17, 14=>19, 15=>20, 16=>21, 17=>23, 18=>24, 19=>25, 20=>27, 21=>28, 22=>29, 23=>31} 
+    LED_TO_PIXEL_GREEN = self.generate_led_to_pixel_map('green') # == {0=>0, 1=>1, 2=>2, 3=>4, 4=>5, 5=>6, 6=>8, 7=>9, 8=>10, 9=>12, 10=>13, 11=>14, 12=>16, 13=>17, 14=>18, 15=>20, 16=>21, 17=>22, 18=>24, 19=>25, 20=>26, 21=>28, 22=>29, 23=>30}
+    LED_TO_PIXEL_BLUE  = self.generate_led_to_pixel_map('blue')  # == {0=>0, 1=>2, 2=>3, 3=>4, 4=>6, 5=>7, 6=>8, 7=>10, 8=>11, 9=>12, 10=>14, 11=>15, 12=>16, 13=>18, 14=>19, 15=>20, 16=>22, 17=>23, 18=>24, 19=>26, 20=>27, 21=>28, 22=>30, 23=>31}
+
+    # LED COLORS
+    LED_OFF    = { r: 0, g: 0, b: 0 }
+    LED_RED    = { r: 1 }
+    LED_YELLOW = { r: 2, g: 1 }
+    LED_GREEN  = { g: 1 }
+    LED_BLUE   = { b: 1 }
+
+    # PIXEL COLORS
+    PIXEL_OFF   = 0
+    PIXEL_RED   = 1
+    PIXEL_GREEN = 1 * 256
+    PIXEL_BLUE  = 1 * 256 * 256
   
     def sync
       Apiotics.sync(self)
@@ -528,137 +55,194 @@ module Indicator
 
     def set_pixel(pixel, value)
       raise 'pixel is undefined' unless pixel
-      self.send("pixel_#{pixel}=", value)
+      send("pixel_#{pixel}=", value)
     end
 
     def set_pixel!(pixel, value)
-      self.set_pixel(pixel, value)
-      self.save
+      set_pixel(pixel, value)
+      save
     end
 
     def increment_pixel(pixel, value)
-      old_value = self.send("pixel_#{pixel}")
-      self.send("pixel_#{pixel}=", old_value + value)
+      old_value = send("pixel_#{pixel}")
+      send("pixel_#{pixel}=", old_value + value)
     end
 
     def increment_pixel!(pixel, value)
-      self.increment_pixel(pixel, value)
-      self.save
+      increment_pixel(pixel, value)
+      save
     end
 
     def reset!
-      self.pixels = 32
-      3.times do
-        self.each_pixel { 5 }
-        self.save
-        sleep 0.25
-        self.each_pixel { 0 }
-        self.save
-      end
+      3.times { flash_all_leds! }
+    end
+
+    def flash_all_leds!(color = LED_GREEN, timeout = 0.25)
+      each_led { color }
+      save
+      sleep timeout
+      each_pixel { PIXEL_OFF }
+      save
+    end
+
+    # The neopixel ring can get into a wierd state, this will fix it.
+    def reset_pixels!
+      reset!
+      pixels = MAX_PIXELS
+      save
+      reset!
+      pixels = NUM_PIXELS
+      save
+      reset!
     end
 
     def clear!
-      self.each_pixel { 0 }
-      self.save
+      each_pixel { PIXEL_OFF }
+      save
     end
 
     def each_pixel(&blk)
-      if block_given?
-        (0...self.pixels).each do |i|
-          self.set_pixel(i, blk.call(i))
-        end
-        return self
-      else
-      end
+      raise 'block needed' unless block_given?
+      (0...pixels).each { |pixel| set_pixel(pixel, blk.call(pixel)) }
+      self
     end
 
     def each_led(&blk)
-      if block_given?
-        (0...24).each do |i|
-          self.set_led(i, blk.call(i))
-        end
-        return self
-      end
+      raise 'block needed' unless block_given?
+      (0...NUM_LEDS).each { |led| self.set_led(led, blk.call(led)) }
+      self
     end
 
-    def set_led_range(start = 0, stop = 24, &blk)
-      if block_given?
-        (start...stop).each do |i|
-          self.set_led(i, blk.call(i))
-        end
-        return self
-      end
+    def set_led_range(start_led = 0, stop_led = (NUM_LEDS - 1), &blk)
+      raise 'block needed' unless block_given?
+      (start_led..stop_led).each { |led| set_led(led, blk.call(led)) }
+      self
     end
 
     def rgb(r,g,b)
       {r: r, g: g, b: b}
     end
 
-    LED_TO_PIXEL_RED = {0=>0, 1=>1, 2=>3, 3=>4, 4=>5, 5=>7, 6=>8, 7=>9, 8=>11, 9=>12, 10=>13, 11=>15, 12=>16, 13=>17, 14=>19, 15=>20, 16=>21, 17=>23, 18=>24, 19=>25, 20=>27, 21=>28, 22=>29, 23=>31} 
-    LED_TO_PIXEL_GREEN = {0=>0, 1=>1, 2=>2, 3=>4, 4=>5, 5=>6, 6=>8, 7=>9, 8=>10, 9=>12, 10=>13, 11=>14, 12=>16, 13=>17, 14=>18, 15=>20, 16=>21, 17=>22, 18=>24, 19=>25, 20=>26, 21=>28, 22=>29, 23=>30}
-    LED_TO_PIXEL_BLUE = {0=>0, 1=>2, 2=>3, 3=>4, 4=>6, 5=>7, 6=>8, 7=>10, 8=>11, 9=>12, 10=>14, 11=>15, 12=>16, 13=>18, 14=>19, 15=>20, 16=>22, 17=>23, 18=>24, 19=>26, 20=>27, 21=>28, 22=>30, 23=>31}
-
-    # options example: { r: 1, g: 1, b: 0 }
-    def set_led(led, options = {})
-      r = options[:r] || 0
-      g = options[:g] || 0
-      b = options[:b] || 0
-      red = [65536, 1, 0, 256]
-      green = [256, 65536, 1, 0]
-      blue = [1, 0, 256, 65536]
-      self.set_pixel(LED_TO_PIXEL_RED[led], 0) unless g != 0 && !(r != 0)
-      self.set_pixel(LED_TO_PIXEL_GREEN[led], 0) unless b != 0 && !(g != 0)
-      self.set_pixel(LED_TO_PIXEL_BLUE[led], 0) unless r != 0 && !(b != 0)
-      self.increment_pixel(LED_TO_PIXEL_RED[led], r * red[LED_TO_PIXEL_RED[led] % 4]) unless r == 0
-      self.increment_pixel(LED_TO_PIXEL_GREEN[led], g * green[LED_TO_PIXEL_GREEN[led] % 4]) unless g == 0
-      self.increment_pixel(LED_TO_PIXEL_BLUE[led], b * blue[LED_TO_PIXEL_BLUE[led] % 4]) unless b == 0
+    def set_led(led, color = LED_OFF)
+      r = color[:r] || 0
+      g = color[:g] || 0
+      b = color[:b] || 0
+      reset_pixels_for_led(led, r, g, b)
+      increment_pixels_for_led(led, r, g, b)
     end
 
-    def set_led!(led, options = {})
-      self.set_led(led, options)
-      self.save
+    def reset_pixels_for_led(led, r, g, b)
+      set_pixel(LED_TO_PIXEL_RED[led], 0) unless g != 0 && !(r != 0)
+      set_pixel(LED_TO_PIXEL_GREEN[led], 0) unless b != 0 && !(g != 0)
+      set_pixel(LED_TO_PIXEL_BLUE[led], 0) unless r != 0 && !(b != 0)
     end
 
-    def self.generate_led_to_pixel_map
-      hash = {}
-      pixel = 0
-      count = 2 # set to 0 for red, 1 for green, 2 for blue
-      (0...24).each do |i|
-        pixel += 1 if count % 3 == 0
-        hash[i] = pixel
-        pixel += 1
-        count += 1
-      end
-      hash
+    def increment_pixels_for_led(led, r, g, b)
+      red   = [PIXEL_BLUE, PIXEL_RED, PIXEL_OFF, PIXEL_GREEN]
+      green = [PIXEL_GREEN, PIXEL_BLUE, PIXEL_RED, PIXEL_OFF]
+      blue  = [PIXEL_RED, PIXEL_OFF, PIXEL_GREEN, PIXEL_BLUE]
+      increment_pixel(LED_TO_PIXEL_RED[led], r * red[LED_TO_PIXEL_RED[led] % 4]) unless r == 0
+      increment_pixel(LED_TO_PIXEL_GREEN[led], g * green[LED_TO_PIXEL_GREEN[led] % 4]) unless g == 0
+      increment_pixel(LED_TO_PIXEL_BLUE[led], b * blue[LED_TO_PIXEL_BLUE[led] % 4]) unless b == 0
     end
 
-    def turn_on!(timeout = 1, options = {})
-      (0...24).each do |i|
+    def set_led!(led, color = {})
+      set_led(led, color)
+      save
+    end
+
+    def animate_turn_on!(start_led = 0, stop_led = (NUM_LEDS - 1), timeout = 0.25, &blk)
+      blk = Proc.new { LED_GREEN } unless block_given?
+      (start_led..stop_led).each do |led|
         sleep timeout
-        self.set_led!(i, options)
+        set_led!(led, blk.call(led))
       end
+    end
+
+    def animate_turn_off!(start_led = (NUM_LEDS - 1), stop_led = 0, timeout = 0.25)
+      start_led.downto(stop_led + 1) do |led|
+        sleep timeout
+        set_led!(led)
+      end
+    end
+
+    def speedometer_color(led)
+      color = LED_GREEN
+      color = LED_YELLOW if led < 12
+      color = LED_RED if led < 8
+      color
+    end
+
+    def set_speedometer!(stop_led)
+      (0..stop_led).each do |led|
+        set_led(led, speedometer_color(led))
+      end
+      save
+    end
+
+    def animate_set_speedometer!(led)
+      animate_turn_off!(23, led)
+      animate_turn_on!(0, led) { |led| speedometer_color(led) }      
+    end
+
+    def set_error!(&blk)
+      blk = Proc.new { LED_BLUE } unless block_given?
+      each_led { blk.call }
+    end
+
+    def set_smile!(color = LED_BLUE)
+      set_led_range(6, 18) { color }
+      set_led(2, color)
+      set_led(21, color)
+      save
+    end
+
+    def flash_smile!(times = 12, timeout = 0.25, &blk)
+      blk = Proc.new { LED_BLUE } unless block_given?
+      times.times do |i|
+        set_smile!(blk.call(i))
+        sleep timeout
+        clear!
+        sleep timeout
+      end
+    end
+
+    def animate_smile!(color = LED_BLUE, timeout = 0.25)
+      clear!
+      center = NUM_LEDS / 2
+      (0..5).each do |led|
+        set_led(center + led, color)
+        set_led(center - led - 1, color)
+        save
+        sleep timeout
+      end
+
+      set_led(21, color)
+      set_led(2, color)
+      save
     end
 
     def party!(timeout = 0.25)
-      states = [rgb(10,0,0), rgb(0,10,0), rgb(0,0,10)]
+      colors = [rgb(10,0,0), rgb(0,10,0), rgb(0,0,10)]
       12.times do
         sleep timeout
-        self.each_led do |led|
-          states.sample
+        each_led do |led|
+          colors.sample
         end
-        self.save
+        save
       end
     end
 
-    def pinwheel!(times = 12)
+    def pinwheel!(times = 12, &blk)
+      blk = Proc.new { PIXEL_RED } unless block_given?
       count = 0
-      times.times do
+      times.times do |i|
         sleep 0.25
-        self.each_pixel { |led| led % 4 == count % 4 ? 5 : 0}
-        self.save
+        each_pixel { |led| led % 4 == count % 4 ? blk.call(i) : PIXEL_OFF}
+        save
         count += 1
       end
-      self.reset!
+      clear!
     end
 
     private
