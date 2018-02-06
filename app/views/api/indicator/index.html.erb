@@ -1,0 +1,14 @@
+<% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+Ready Responder Indicator
+
+<%= button_to "Start Poll", action: "start_poll" %>
+</br>
+<%= button_to "Stop Poll", action: "stop_poll" %>
+
+</br>
+</br>
+</br>
+<%= button_to "TEST", action: "test" %>
